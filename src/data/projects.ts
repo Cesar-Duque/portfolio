@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "Projetos exploratórios e de estudo com LLMs, busca semântica e automações inteligentes.",
     description:
       "Aprofundamento em Dados e IA: experimentação com embeddings, bancos vetoriais e pipelines RAG (Retrieval Augmented Generation) para aplicações que consultam bases de conhecimento de forma contextual. Estudos ativos com curso oficial mlabonne/llm-course e aplicações práticas integradas a backends PHP/Python.",
-    year: 2025,
+    year: 2026,
     role: "Pesquisa & Desenvolvimento",
     tags: ["LLMs", "RAG", "Python", "Embeddings", "IA", "Busca Semântica"],
     status: "wip",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
       "Aplicação completa de gerenciamento de tarefas com Laravel 8 + React + Sanctum + Bootstrap.",
     description:
       "Repositório completo de exemplo e estudo: gestão de tarefas (CRUD, categorização, filtros) com API backend em Laravel 8 protegida por Sanctum, e SPA em React integrada via Axios. Front estilizado com Bootstrap. Demonstra autenticação SPA completa, padrão Repository e boas práticas de separação de camadas.",
-    year: 2023,
+    year: 2026,
     role: "Full Stack Developer",
     tags: ["Laravel 8", "React", "Sanctum", "Bootstrap", "PHP", "MySQL"],
     status: "live",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
       "API de gerenciamento de usuários em ASP.NET Core com Dapper e SQL Server.",
     description:
       "API REST em C# / ASP.NET Core para CRUD de usuários, utilizando Dapper como ORM leve e SQL Server como persistência. Foco em performance de consultas, separação de camadas e padrão Repository. Repositório pinned no GitHub.",
-    year: 2024,
+    year: 2025,
     role: "Backend Developer",
     tags: ["C#", "ASP.NET Core", "Dapper", "SQL Server", "REST API", "Repository Pattern"],
     status: "live",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
       "API de catálogo de livros em ASP.NET Core com Entity Framework Core.",
     description:
       "Contraparte EF Core do projeto Dapper: API REST de gerenciamento de catálogo de livros com ASP.NET Core, Entity Framework Core e SQL Server. Modelagem de entidades relacionais, migrations e consultas LINQ tipadas. Repositório pinned no GitHub.",
-    year: 2024,
+    year: 2025,
     role: "Backend Developer",
     tags: ["C#", "ASP.NET Core", "Entity Framework", "SQL Server", "Migrations", "REST API"],
     status: "live",
@@ -183,7 +183,7 @@ export const projects: Project[] = [
       "Aplicação de agenda (contatos e compromissos) em PHP com persistência em banco.",
     description:
       "Repositório de estudo: aplicação de agenda em PHP com cadastro e consulta de contatos/compromissos, autenticação básica e listagem com filtros. Mantida como referência de linguagem e demonstrativo de padrões.",
-    year: 2022,
+    year: 2026,
     role: "Desenvolvimento",
     tags: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
     status: "archived",
