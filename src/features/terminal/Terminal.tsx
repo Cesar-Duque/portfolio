@@ -227,19 +227,9 @@ export const Terminal = forwardRef<HTMLDivElement, TerminalProps>(
                   autoCapitalize="off"
                   autoCorrect="off"
                   autoComplete="off"
-                  className="w-full bg-transparent outline-none font-mono text-xs sm:text-[13px] text-text-heading placeholder:text-text-muted caret-transparent"
+                  className="w-full bg-transparent outline-none font-mono text-xs sm:text-[13px] text-text-heading placeholder:text-text-muted caret-accent"
+                  style={{ caretColor: "rgb(192, 132, 252)", animation: "blink 1s step-end infinite" } as React.CSSProperties}
                   aria-label="Terminal input"
-                />
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute left-0 top-0 text-xs sm:text-[13px] font-mono text-text-heading whitespace-pre-wrap break-all"
-                  style={{ visibility: "hidden" }}
-                >
-                  {/* spacer so caret can be measured if needed — leave hidden */}
-                </span>
-                <span
-                  aria-hidden
-                  className="pointer-events-none inline-block ml-px h-[14px] sm:h-[15px] w-[7px] align-middle bg-terminal-cursor animate-blink"
                 />
               </div>
             </div>

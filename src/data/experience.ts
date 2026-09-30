@@ -2,6 +2,26 @@ import type { ExperienceItem } from "@/types"
 
 export const experience: ExperienceItem[] = [
   {
+    id: "e-1",
+    company: "iMoth",
+    role: "Desenvolvedor Full Stack Júnior",
+    period: "2026 — Atual",
+    startDate: "2026-01-01",
+    endDate: "2026-12-31",
+    location: "Presencial",
+    remote: false,
+    description:
+      "Atuação na iMoth (empresa de tecnologia com 12+ anos, ES), especializada em sistemas web, apps, e-commerce e soluções com Inteligência Artificial. Desenvolvimento full stack em projetos de clientes, utilizando metodologia IA-first para integrar LLMs, automações inteligentes e ganho de produtividade em produtos sob medida.",
+    stack: ["Laravel", "PHP", "React", "Inteligência Artificial", "IA-first"],
+    achievements: [
+      "Desenvolvimento e manutenção de sistemas administrativos e plataformas web personalizadas em Laravel + React",
+      "Aplicação da metodologia IA-first: integração de Chatbots, automação de tarefas e features inteligentes em sistemas do zero",
+      "Construção de interfaces e componentes reutilizáveis em React para sistemas e apps multiplataforma",
+      "Migração e integração de sistemas de terceiros, APIs e gateways de pagamento",
+      "Participação em projetos de e-commerce, sistemas administrativos e ERPs com foco em resultado do cliente",
+    ],
+  },
+  {
     id: "e0",
     company: "Printer Trace",
     role: "Full Stack Developer & Analista de Dados",

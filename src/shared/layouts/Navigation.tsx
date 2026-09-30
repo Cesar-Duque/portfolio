@@ -103,23 +103,42 @@ export function Navigation({ onOpenTerminal }: NavigationProps) {
                 </button>
               )
             })}
+
+            <span className="mx-2 h-5 w-px bg-border-strong" aria-hidden />
+
             <button
               onClick={onOpenTerminal}
-              className="ml-1 flex items-center gap-1.5 rounded-pill pl-3 pr-4 py-1.5 text-xs font-medium text-text-heading hover:text-accent transition-colors"
-              title="Abrir terminal"
+              className="group relative flex items-center gap-2 rounded-pill pl-3 pr-2 py-1.5
+                         bg-gradient-to-r from-accent via-accent to-accent-2
+                         text-white shadow-[0_0_24px_-6px_rgba(192,132,252,0.7)]
+                         ring-1 ring-accent/40 hover:brightness-110 hover:shadow-[0_0_32px_-4px_rgba(192,132,252,0.85)]
+                         transition-all active:scale-95"
+              title="Abrir terminal — Ctrl+K / ⌘K"
             >
-              <Terminal size={14} weight="bold" />
-              <span>Terminal</span>
+              <span className="absolute inset-0 rounded-pill bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              <Terminal size={15} weight="bold" className="drop-shadow" />
+              <span className="relative z-10 text-xs font-semibold tracking-tight">
+                Terminal
+              </span>
+              <kbd className="relative z-10 flex items-center gap-0.5 rounded-md bg-black/25 ring-1 ring-white/20 px-1.5 py-0.5 text-[9.5px] font-mono font-semibold text-white/90">
+                <span className="sm:hidden">Ctrl</span>
+                <span className="hidden sm:inline">⌘</span>
+                <span>K</span>
+              </kbd>
             </button>
           </nav>
 
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={onOpenTerminal}
-              className="rounded-pill hairline p-2 text-text-heading bg-bg/75 backdrop-blur"
+              className="rounded-pill p-2 text-white
+                         bg-gradient-to-r from-accent via-accent to-accent-2
+                         shadow-[0_0_20px_-4px_rgba(192,132,252,0.75)]
+                         ring-1 ring-accent/40 active:scale-95 transition-all"
               aria-label="Abrir terminal"
+              title="Abrir terminal — Ctrl+K / ⌘K"
             >
-              <Terminal size={16} />
+              <Terminal size={17} weight="bold" />
             </button>
             <button
               onClick={() => setOpen((v) => !v)}
