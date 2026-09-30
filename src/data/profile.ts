@@ -22,7 +22,6 @@ export const profile = {
     { label: "Bacharel em SI", value: "UVV" },
     { label: "Pós · IA & Dados", value: "LLMs · RAG" },
   ],
-  resumeUrl: "./#/resume",
   education: [
     {
       school: "Descomplica Digital College",

@@ -70,15 +70,6 @@ export function ContactSection() {
                   {profile.email}
                   <ArrowUpRight size={15} />
                 </MagneticButton>
-                <MagneticButton
-                  variant="ghost"
-                  href={profile.resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Abrir CV
-                  <ArrowUpRight size={14} />
-                </MagneticButton>
               </div>
             </div>
 

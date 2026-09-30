@@ -261,19 +261,6 @@ export const commandDefinitions: CommandDefinition[] = [
       ctx.pushLine(out("info", `Executando como root: ${args.join(" ") || "(nada)"} ... não mesmo.`))
     },
   },
-  {
-    name: "resume",
-    aliases: ["cv", "curriculo", "curriculum"],
-    description: "Abre o currículo profissional em nova aba (PDF-ready)",
-    run: (_args, ctx) => {
-      ctx.pushLine(out("success", "Abrindo currículo profissional..."))
-      ctx.pushLine(out("info", `Dica: na página do CV clique em "Salvar como PDF" no topo.`))
-      // Usa hash-based routing para funcionar em GitHub Pages (subpath)
-      // sem 404, pois Pages nao tem rewrite de pathname.
-      const base = (window.location.origin + window.location.pathname).replace(/\/+$/, "")
-      window.open(`${base}/#/resume`, "_blank", "noopener,noreferrer")
-    },
-  },
 ]
 
 export const commandsMap = new Map<string, CommandDefinition>()

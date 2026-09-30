@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import { Background3D } from "@/features/hero/Background3D"
 import { Hero } from "@/features/hero/Hero"
 import { About } from "@/features/about/About"
@@ -10,44 +10,16 @@ import { CustomCursor } from "@/shared/layouts/CustomCursor"
 import { Navigation } from "@/shared/layouts/Navigation"
 import { ScrollProgress } from "@/shared/layouts/ScrollProgress"
 import { TerminalModal } from "@/features/terminal/TerminalModal"
-import { ResumePage } from "@/features/resume/ResumePage"
-
-function hasResumeRoute() {
-  if (typeof window === "undefined") return false
-  const hash = window.location.hash.replace(/^#/, "")
-  if (hash.startsWith("/resume") || hash === "resume") return true
-  const path = window.location.pathname
-  return (
-    path.endsWith("/resume") ||
-    path.endsWith("/resume/") ||
-    /\/resume\/?$/.test(path)
-  )
-}
 
 function App() {
-  const [showResume, setShowResume] = useState<boolean>(() => hasResumeRoute())
   const [terminalOpen, setTerminalOpen] = useState(false)
   const [openProjectSlug, setOpenProjectSlug] = useState<string | null>(null)
-
-  useEffect(() => {
-    const check = () => setShowResume(hasResumeRoute())
-    window.addEventListener("popstate", check)
-    window.addEventListener("hashchange", check)
-    return () => {
-      window.removeEventListener("popstate", check)
-      window.removeEventListener("hashchange", check)
-    }
-  }, [])
 
   const scrollTo = useCallback((id: string) => {
     const el = document.getElementById(id)
     if (!el) return
     el.scrollIntoView({ behavior: "smooth", block: "start" })
   }, [])
-
-  if (showResume) {
-    return <ResumePage />
-  }
 
   return (
     <div className="relative min-h-svh w-full bg-bg overflow-hidden">
