@@ -38,9 +38,14 @@ export function Navigation({ onOpenTerminal }: NavigationProps) {
   }, [])
 
   const scrollTo = (id: string) => {
+    if (id === "hero") {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+      setOpen(false)
+      return
+    }
     const el = document.getElementById(id)
     if (!el) return
-    el.scrollIntoView({ behavior: "auto", block: "start" })
+    el.scrollIntoView({ behavior: "auto", block: "start", inline: "nearest" })
     setOpen(false)
   }
 

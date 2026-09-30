@@ -16,9 +16,13 @@ function App() {
   const [openProjectSlug, setOpenProjectSlug] = useState<string | null>(null)
 
   const scrollTo = useCallback((id: string) => {
+    if (id === "hero") {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+      return
+    }
     const el = document.getElementById(id)
     if (!el) return
-    el.scrollIntoView({ behavior: "auto", block: "start" })
+    el.scrollIntoView({ behavior: "auto", block: "start", inline: "nearest" })
   }, [])
 
   return (

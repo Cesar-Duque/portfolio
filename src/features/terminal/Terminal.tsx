@@ -227,8 +227,8 @@ export const Terminal = forwardRef<HTMLDivElement, TerminalProps>(
                   autoCapitalize="off"
                   autoCorrect="off"
                   autoComplete="off"
-                  className="w-full bg-transparent outline-none font-mono text-xs sm:text-[13px] text-text-heading placeholder:text-text-muted caret-accent"
-                  style={{ caretColor: "rgb(192, 132, 252)", animation: "blink 1s step-end infinite" } as React.CSSProperties}
+                  className="w-full bg-transparent outline-none font-mono text-xs sm:text-[13px] text-text-heading placeholder:text-text-muted"
+                  style={{ caretColor: "rgb(192, 132, 252)" } as React.CSSProperties}
                   aria-label="Terminal input"
                 />
               </div>
