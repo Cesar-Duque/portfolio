@@ -268,10 +268,10 @@ export const commandDefinitions: CommandDefinition[] = [
     run: (_args, ctx) => {
       ctx.pushLine(out("success", "Abrindo currículo profissional..."))
       ctx.pushLine(out("info", `Dica: na página do CV clique em "Salvar como PDF" no topo.`))
-      const url =
-        (window.location.origin + window.location.pathname).replace(/\/+$/, "") +
-        "/resume"
-      window.open(url, "_blank", "noopener,noreferrer")
+      // Usa hash-based routing para funcionar em GitHub Pages (subpath)
+      // sem 404, pois Pages nao tem rewrite de pathname.
+      const base = (window.location.origin + window.location.pathname).replace(/\/+$/, "")
+      window.open(`${base}/#/resume`, "_blank", "noopener,noreferrer")
     },
   },
 ]

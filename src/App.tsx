@@ -12,31 +12,30 @@ import { ScrollProgress } from "@/shared/layouts/ScrollProgress"
 import { TerminalModal } from "@/features/terminal/TerminalModal"
 import { ResumePage } from "@/features/resume/ResumePage"
 
-function isResumeRoute() {
+function hasResumeRoute() {
   if (typeof window === "undefined") return false
+  const hash = window.location.hash.replace(/^#/, "")
+  if (hash.startsWith("/resume") || hash === "resume") return true
   const path = window.location.pathname
-  const hash = window.location.hash
   return (
     path.endsWith("/resume") ||
     path.endsWith("/resume/") ||
-    path.includes("/resume") ||
-    hash === "#/resume" ||
-    hash === "#resume"
+    /\/resume\/?$/.test(path)
   )
 }
 
 function App() {
-  const [showResume, setShowResume] = useState<boolean>(() => isResumeRoute())
+  const [showResume, setShowResume] = useState<boolean>(() => hasResumeRoute())
   const [terminalOpen, setTerminalOpen] = useState(false)
   const [openProjectSlug, setOpenProjectSlug] = useState<string | null>(null)
 
   useEffect(() => {
-    const onRoute = () => setShowResume(isResumeRoute())
-    window.addEventListener("popstate", onRoute)
-    window.addEventListener("hashchange", onRoute)
+    const check = () => setShowResume(hasResumeRoute())
+    window.addEventListener("popstate", check)
+    window.addEventListener("hashchange", check)
     return () => {
-      window.removeEventListener("popstate", onRoute)
-      window.removeEventListener("hashchange", onRoute)
+      window.removeEventListener("popstate", check)
+      window.removeEventListener("hashchange", check)
     }
   }, [])
 
