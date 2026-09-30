@@ -71,6 +71,15 @@ export const stack: StackItemWithTech[] = [
     since: 2024,
   },
   {
+    id: "vue",
+    name: "Vue.js",
+    category: "frontend",
+    level: 3,
+    techId: "vue",
+    usedIn: [],
+    since: 2025,
+  },
+  {
     id: "vite",
     name: "Vite",
     category: "frontend",
@@ -144,6 +153,15 @@ export const stack: StackItemWithTech[] = [
     usedIn: ["llm-pipelines-rag"],
     since: 2026,
   },
+  {
+    id: "looker",
+    name: "Google Looker (BI)",
+    category: "data",
+    level: 3,
+    techId: "looker",
+    usedIn: [],
+    since: 2025,
+  },
 
   // Infra & DevOps
   {
@@ -163,6 +181,15 @@ export const stack: StackItemWithTech[] = [
     techId: "github-actions",
     usedIn: ["portfolio-experimental"],
     since: 2022,
+  },
+  {
+    id: "docker",
+    name: "Docker",
+    category: "devops",
+    level: 3,
+    techId: "docker",
+    usedIn: [],
+    since: 2025,
   },
 ]
 

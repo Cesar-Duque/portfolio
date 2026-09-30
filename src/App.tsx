@@ -18,7 +18,7 @@ function App() {
   const scrollTo = useCallback((id: string) => {
     const el = document.getElementById(id)
     if (!el) return
-    el.scrollIntoView({ behavior: "smooth", block: "start" })
+    el.scrollIntoView({ behavior: "auto", block: "start" })
   }, [])
 
   return (
@@ -34,10 +34,7 @@ function App() {
       <Navigation onOpenTerminal={() => setTerminalOpen(true)} />
 
       <main className="relative z-10">
-        <Hero
-          onScrollTo={scrollTo}
-          onOpenProject={(s) => setOpenProjectSlug(s)}
-        />
+        <Hero onScrollTo={scrollTo} />
         <About />
         <StackSection />
         <ProjectsSection

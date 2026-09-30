@@ -5,6 +5,9 @@ export type TechId =
   | "php"
   | "dotnet"
   | "csharp"
+  | "vue"
+  | "docker"
+  | "looker"
   | "react"
   | "typescript"
   | "angular"
@@ -277,6 +280,41 @@ const ICONS: Record<TechId, IconSet> = {
     path: (
       <g fill="currentColor">
         <path d="M12.5.75a.75.75 0 00-.75.75v1.5a.75.75 0 001.5 0v-1.5a.75.75 0 00-.75-.75zM5.05 3.05a.75.75 0 00-1.06 1.06l1.06 1.06a.75.75 0 001.06-1.06zM18.95 3.05a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 01-1.06-1.06zM1.5 12a.75.75 0 00.75.75h1.5a.75.75 0 000-1.5h-1.5A.75.75 0 001.5 12zm18.75.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5zM5.05 20.95l-1.06-1.06a.75.75 0 10-1.06 1.06l1.06 1.06a.75.75 0 001.06-1.06zM17.89 19.89a.75.75 0 001.06 1.06l1.06-1.06a.75.75 0 10-1.06-1.06zM12 21.75a.75.75 0 00-.75.75v.75h1.5v-.75a.75.75 0 00-.75-.75zM16 12l-2.5 4h5zM10.5 8h5L8 16h1.6L10.5 8z" opacity=".9" transform="translate(0 0.2) scale(0.95)" />
+      </g>
+    ),
+  },
+
+  // ---------- NOVOS (Printer Trace) ----------
+  vue: {
+    brandColor: "#4FC08D",
+    viewBox: "0 0 24 24",
+    path: (
+      <path
+        fill="currentColor"
+        d="M2 3h4l6 10 6-10h4L12 21 2 3zm6.5 0L12 7.9 15.5 3h3L12 14.1 5.5 3z"
+        transform="translate(0 1) scale(0.95)"
+      />
+    ),
+  },
+  docker: {
+    brandColor: "#2496ED",
+    viewBox: "0 0 24 24",
+    path: (
+      <g fill="currentColor">
+        <path d="M13 10h2V8h-2v2zm-3 0h2V8h-2v2zm-3 0h2V8H7v2zm-3 0h2V8H4v2zm3-3h2V5H7v2zm3 0h2V5h-2v2zm3 0h2V5h-2v2zm11.98 3.1c-.14-.24-.34-.44-.57-.56-.04-.02-.04-.04-.04-.06 0-.1-.14-.27-.22-.34-.33-.3-.83-.59-1.7-.48-.34.04-.59.18-.77.33-.16.13-.17.18-.22.37-.26.97-.22 2.06.36 2.95-.34.19-1.15.23-1.9.04-1.47-.37-2.84-1.28-2.84-1.28.02-1.37-.75-2.48-1.73-3.12-.37-.24-.8-.44-1.35-.5-.4-.04-.95-.01-1.41.12-.8.23-1.5.68-1.99 1.29-.32.39-.55.84-.69 1.32a7.49 7.49 0 00-.33 1.07c-.11.54.02 1.07.38 1.47.36.4.88.59 1.5.58 3.89.04 7.59-1.37 10.56-3.87.28-.24.46-.55.53-.9 0-.01.05-.22.18-.35z" transform="translate(0.5 0.5) scale(0.92)" />
+      </g>
+    ),
+  },
+  looker: {
+    brandColor: "#4285F4",
+    viewBox: "0 0 24 24",
+    path: (
+      <g fill="currentColor">
+        <circle cx="12" cy="12" r="9" opacity=".9" />
+        <circle cx="12" cy="12" r="4" fill="#fff" />
+        <rect x="11" y="17" width="2" height="6" fill="currentColor" />
+        <rect x="17" y="11" width="6" height="2" fill="currentColor" />
+        <path d="M18.5 18.5l4 4M15.5 15.5l2 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" fill="none" />
       </g>
     ),
   },

@@ -2,6 +2,33 @@ import type { ExperienceItem } from "@/types"
 
 export const experience: ExperienceItem[] = [
   {
+    id: "e0",
+    company: "Printer Trace",
+    role: "Full Stack Developer & Analista de Dados",
+    period: "2025 — Atual",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    location: "Remoto",
+    remote: true,
+    description:
+      "Atuação na Printer Trace, plataforma de MPS (Managed Print Services) com mais de 20 anos de mercado e 1000+ clientes e 50 mil+ dispositivos gerenciados. Desenvolvimento full-stack e análise de dados em ambiente de alta disponibilidade: coleta, relatórios inteligentes, dashboards e integrações BI com Looker.",
+    stack: [
+      "Laravel",
+      "PHP",
+      "Vue.js",
+      "Docker",
+      "PostgreSQL",
+      "Google Looker",
+    ],
+    achievements: [
+      "Desenvolvimento e manutenção de módulos do painel SaaS e on-premises em Laravel + Vue para gestão de frotas de impressão",
+      "Construção de dashboards analíticos e relatórios customizados no Google Looker (Data Studio), conectando dados de milhares de dispositivos",
+      "Infraestrutura com Docker para ambientes consistentes e pipelines de integração",
+      "Queries analíticas em PostgreSQL para consumo, volume e métricas por cliente",
+      "Integrações de dados e BI com Power BI, Tableau e outras plataformas",
+    ],
+  },
+  {
     id: "e1",
     company: "Vilainfo",
     role: "Full Stack Developer · Estágio",

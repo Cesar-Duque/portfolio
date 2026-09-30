@@ -40,7 +40,7 @@ export function Navigation({ onOpenTerminal }: NavigationProps) {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
     if (!el) return
-    el.scrollIntoView({ behavior: "smooth", block: "start" })
+    el.scrollIntoView({ behavior: "auto", block: "start" })
     setOpen(false)
   }
 

@@ -18,7 +18,7 @@ export const profile = {
     { label: "Email", url: "mailto:cduquebr@gmail.com", icon: "EnvelopeSimple" },
   ],
   facts: [
-    { label: "Anos de experiência", value: "3" },
+    { label: "Anos de experiência", value: "3+" },
     { label: "Bacharel em SI", value: "UVV" },
     { label: "Pós · IA & Dados", value: "LLMs · RAG" },
   ],
