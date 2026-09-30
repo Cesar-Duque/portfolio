@@ -1,0 +1,175 @@
+import type { StackItem } from "@/types"
+import type { TechId } from "@/shared/components/TechIcon"
+
+type StackItemWithTech = Omit<StackItem, "icon"> & { techId: TechId }
+
+export const stack: StackItemWithTech[] = [
+  // Backend
+  {
+    id: "laravel",
+    name: "Laravel",
+    category: "backend",
+    level: 4,
+    techId: "laravel",
+    usedIn: ["gestor-tarefas-laravel-react", "llm-pipelines-rag"],
+    since: 2026,
+  },
+  {
+    id: "php",
+    name: "PHP",
+    category: "backend",
+    level: 4,
+    techId: "php",
+    usedIn: ["gestor-tarefas-laravel-react", "gestao-estoque-php", "agenda-php"],
+    since: 2026,
+  },
+  {
+    id: "dotnet",
+    name: "ASP.NET Core",
+    category: "backend",
+    level: 4,
+    techId: "dotnet",
+    usedIn: ["usermanagement-dapper-api", "bookcatalog-ef-api", "plataforma-educacional"],
+    since: 2024,
+  },
+  {
+    id: "csharp",
+    name: "C#",
+    category: "backend",
+    level: 4,
+    techId: "csharp",
+    usedIn: ["usermanagement-dapper-api", "bookcatalog-ef-api", "plataforma-educacional"],
+    since: 2024,
+  },
+
+  // Frontend
+  {
+    id: "react",
+    name: "React",
+    category: "frontend",
+    level: 4,
+    techId: "react",
+    usedIn: ["portfolio-experimental", "gestor-tarefas-laravel-react"],
+    since: 2026,
+  },
+  {
+    id: "typescript",
+    name: "TypeScript",
+    category: "frontend",
+    level: 4,
+    techId: "typescript",
+    usedIn: ["portfolio-experimental", "plataforma-educacional"],
+    since: 2024,
+  },
+  {
+    id: "angular",
+    name: "Angular",
+    category: "frontend",
+    level: 4,
+    techId: "angular",
+    usedIn: ["plataforma-educacional"],
+    since: 2024,
+  },
+  {
+    id: "vite",
+    name: "Vite",
+    category: "frontend",
+    level: 4,
+    techId: "vite",
+    usedIn: ["portfolio-experimental"],
+    since: 2026,
+  },
+  {
+    id: "tailwind",
+    name: "Tailwind CSS",
+    category: "frontend",
+    level: 4,
+    techId: "tailwind",
+    usedIn: ["portfolio-experimental"],
+    since: 2026,
+  },
+
+  // Dados & IA (destaque!)
+  {
+    id: "postgresql",
+    name: "PostgreSQL",
+    category: "data",
+    level: 4,
+    techId: "postgresql",
+    usedIn: ["plataforma-educacional", "gestor-tarefas-laravel-react"],
+    since: 2024,
+  },
+  {
+    id: "sqlserver",
+    name: "SQL Server",
+    category: "data",
+    level: 4,
+    techId: "sqlserver",
+    usedIn: ["usermanagement-dapper-api", "bookcatalog-ef-api"],
+    since: 2024,
+  },
+  {
+    id: "mysql",
+    name: "MySQL",
+    category: "data",
+    level: 4,
+    techId: "mysql",
+    usedIn: ["gestao-estoque-php", "agenda-php", "gestor-tarefas-laravel-react"],
+    since: 2024,
+  },
+  {
+    id: "llm",
+    name: "LLMs & Embeddings",
+    category: "data",
+    level: 3,
+    techId: "llm",
+    usedIn: ["llm-pipelines-rag"],
+    since: 2026,
+  },
+  {
+    id: "rag",
+    name: "RAG · Busca Semântica",
+    category: "data",
+    level: 3,
+    techId: "rag",
+    usedIn: ["llm-pipelines-rag"],
+    since: 2026,
+  },
+  {
+    id: "python-ds",
+    name: "Python (Dados & IA)",
+    category: "data",
+    level: 3,
+    techId: "python",
+    usedIn: ["llm-pipelines-rag"],
+    since: 2026,
+  },
+
+  // Infra & DevOps
+  {
+    id: "zabbix",
+    name: "Zabbix",
+    category: "devops",
+    level: 3,
+    techId: "zabbix",
+    usedIn: [],
+    since: 2022,
+  },
+  {
+    id: "github-actions",
+    name: "GitHub Actions",
+    category: "devops",
+    level: 3,
+    techId: "github-actions",
+    usedIn: ["portfolio-experimental"],
+    since: 2022,
+  },
+]
+
+export const stackCategories = [
+  { key: "frontend", label: "Frontend" },
+  { key: "backend", label: "Backend" },
+  { key: "data", label: "Dados & IA" },
+  { key: "devops", label: "Infra & DevOps" },
+  { key: "tools", label: "Ferramentas" },
+] as const

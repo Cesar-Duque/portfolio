@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0B0B0B;
+    color: #A1A1AA;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: rgba(192,132,252,0.35);
+    color: #FAFAFA;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #0B0B0B;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.08);
+    border-radius: 9999px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.18);
+  }
+  h1, h2, h3, h4 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    color: #FAFAFA;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply px-6 sm:px-8 lg:px-12;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  .hairline {
+    @apply ring-1 ring-border;
+  }
+  .hairline-strong {
+    @apply ring-1 ring-border-strong;
+  }
+  .btn-pill {
+    @apply inline-flex items-center gap-2 rounded-pill px-5 py-2.5 text-sm font-medium transition-all duration-300;
+  }
+  .btn-pill-primary {
+    @apply btn-pill bg-text-heading text-bg hover:shadow-glow;
+  }
+  .btn-pill-ghost {
+    @apply btn-pill hairline bg-bg-soft/60 text-text-heading hover:bg-bg-raised hover:hairline-strong backdrop-blur-md;
+  }
+  .card-surface {
+    @apply rounded-2xl bg-bg-soft/50 hairline backdrop-blur-md;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-pill px-3 py-1 text-xs font-medium hairline bg-bg-soft/50 text-text;
+  }
+  .section-title {
+    @apply text-4xl sm:text-5xl md:text-6xl font-display font-semibold tracking-tighter2 leading-[0.95];
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.18em] text-accent;
+  }
+  .link-underline {
+    @apply relative;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute left-0 bottom-0 h-px w-0 bg-accent transition-all duration-300;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+  .mask-fade-r {
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Print styles — Currículo A4 profissional
+   ============================================================ */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    background-color: #ffffff !important;
+    color: #0a0a0a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .print\:hidden,
+  .sticky,
+  header,
+  nav,
+  footer {
+    display: none !important;
+  }
+  /* Remove barra do portfolio / background se por acaso renderizar */
+  #resume-page ~ * { display: none !important; }
+  main,
+  #root,
+  #root > div,
+  #root > div > div {
+    background: #fff !important;
+    background-color: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+  #resume-page {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 12mm 14mm !important;
+    margin: 0 !important;
+    min-height: 297mm !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+  }
+  /* Linhas separadoras */
+  #resume-page section > div:first-child,
+  #resume-page header,
+  #resume-page footer {
+    border-color: #d4d4d8 !important;
+  }
+  /* Chips cinza - imprima fundo */
+  #resume-page .chip,
+  #resume-page span[class*="rounded-full"],
+  #resume-page span[class*="rounded-md"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Tons neutros - força para nao sair branco em alguns browsers */
+  .text-neutral-900 { color: #0a0a0a !important; }
+  .text-neutral-800 { color: #262626 !important; }
+  .text-neutral-700 { color: #404040 !important; }
+  .text-neutral-600 { color: #52525b !important; }
+  .text-neutral-500 { color: #71717a !important; }
+  .text-neutral-400 { color: #a1a1aa !important; }
+  .border-neutral-200 { border-color: #e4e4e7 !important; }
+  .bg-neutral-50, .bg-neutral-50\/50 { background-color: #fafafa !important; }
+  .bg-neutral-100 { background-color: #f4f4f5 !important; }
+  .bg-emerald-50 { background-color: #ecfdf5 !important; }
+  .text-emerald-700 { color: #047857 !important; }
+  .ring-neutral-200,
+  .ring-1 { --tw-ring-color: #e4e4e7 !important; }
+}
